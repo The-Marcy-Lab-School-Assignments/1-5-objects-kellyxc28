@@ -12,7 +12,9 @@ const haveBirthday = (person) => {
     person.age += 1;  // access age, add one to it, and update the value of age with it 
 };
 
-const becomeSecretAgent = () => {
+const becomeSecretAgent = (person, spyHandle) => {
+    delete person.name; 
+    person.spyHandle = spyHandle; 
 };
 
 const carMaker = () => {
