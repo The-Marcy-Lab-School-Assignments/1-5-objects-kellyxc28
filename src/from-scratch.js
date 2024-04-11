@@ -7,7 +7,9 @@ const coolGreeting = (person) => {
     }
 };
 
-const haveBirthday = () => {
+const haveBirthday = (person) => {
+    const {name, age} = person;   // similar to destructuring arrays 
+    person.age += 1;  // access age, add one to it, and update the value of age with it 
 };
 
 const becomeSecretAgent = () => {
