@@ -39,6 +39,9 @@ const listHobbies = (person) => {
 };
 
 const getNextOpponent = (team) => {
+    if (team.matches.length === 0) {
+      return null;
+    }
     return team.matches[0].teamName;
 };
 
