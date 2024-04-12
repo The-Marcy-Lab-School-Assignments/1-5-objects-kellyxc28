@@ -46,7 +46,8 @@ const listAllKeys = (object) => {
     return Object.keys(object);
 };
 
-const listAllValues = () => {
+const listAllValues = (object) => {
+    return Object.values(object);
 };
 
 const convertToMatrix = () => {
