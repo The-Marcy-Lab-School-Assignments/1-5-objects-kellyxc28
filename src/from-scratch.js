@@ -53,8 +53,29 @@ const listAllValues = (object) => {
     return Object.values(object);
 };
 
-const convertToMatrix = () => {
-};
+const convertToMatrix = (arr) => {
+    const matrixArr = [];
+
+    if (arr.length === 0) {
+      return [];
+    }
+
+    // since the key names are the same for all entries, just take the ones from the first entry  
+    const keys = Object.keys(arr[0]);
+    matrixArr.push(keys);   // first array in matrix - the keys 
+
+    for (let i = 0; i < arr.length; i++) {  // iterate through the entries 
+        /* values (temporary array): holds the values of current entry being accessed, returns back to 
+        an empty array at the start of next iteration */ 
+        // Object.values() --> already returns values in an array format 
+        let values = Object.values(arr[i]);
+        
+        // push these values into the matrix before starting all over for the next entry 
+        matrixArr.push(values);
+    }
+
+    return matrixArr;
+}
 
 module.exports = {
   coolGreeting,
